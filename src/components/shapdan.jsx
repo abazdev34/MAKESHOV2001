@@ -1,6 +1,5 @@
-
-import  { useState, useRef } from 'react';
-import { Camera, Phone, Instagram, User, Upload, Download, Share, X, Youtube, Send,  Users } from 'lucide-react';
+import { useState, useRef } from 'react';
+import { Camera, Phone, Instagram, User, Upload, Download, Share, X, Youtube, Send, MessageCircle } from 'lucide-react';
 import Img from '../assets/Sho.jpg';
 const ElectronicBusinessCard = () => {
   const [profileImage, setProfileImage] = useState(Img);
@@ -48,11 +47,11 @@ const ElectronicBusinessCard = () => {
       // Визитканы canvas форматында жасап алуу (жөнөкөйлөштүрүлгөн версия)
       const cardData = {
         name: 'Макешов Шабдан',
-        phone: '+7 977 323 04 49',
-        instagram: '@shabdan_makeshov',
+        phone: '+996501379043',
+        instagram: '@Makeshov_21',
         youtube: '@shabdan_makeshov',
         telegram: '@shabdan_makeshov',
-        hobbies: ['Футбол ойноо', 'Тоого чыгуу'],
+        whatsapp: '+996501379043',
         image: profileImage
       };
       
@@ -75,7 +74,7 @@ const ElectronicBusinessCard = () => {
   const shareCard = async () => {
     const shareData = {
       title: 'Макешов Шабдан - Визитка',
-      text: 'Макешов Шабдан менен байланышуу үчүн: +7 977 323 04 49\nYouTube: @shabdan_makeshov\nTelegram: @shabdan_makeshov',
+      text: 'Макешов Шабдан менен байланышуу үчүн: +996501379043\nYouTube: @shabdan_makeshov\nTelegram: @shabdan_makeshov\nWhatsApp: +996501379043',
       url: window.location.href,
     };
 
@@ -93,7 +92,7 @@ const ElectronicBusinessCard = () => {
   };
 
   const copyToClipboard = () => {
-    const text = `Макешов Шабдан\nТелефон: +7 977 323 04 49\nInstagram: @shabdan_makeshov\nYouTube: @shabdan_makeshov\nTelegram: @shabdan_makeshov\nХобилери: Футбол ойноо, Тоого чыгуу`;
+    const text = `Макешов Шабдан\nТелефон: +996501379043\nInstagram: @Makeshov_21\nYouTube: @shabdan_makeshov\nTelegram: @shabdan_makeshov\nWhatsApp: +996501379043`;
     navigator.clipboard.writeText(text).then(() => {
       alert('Маалымат көчүрүлдү!');
     }).catch(() => {
@@ -177,27 +176,9 @@ const ElectronicBusinessCard = () => {
             </div>
             
             <h1 className="profile-name">
-              MAKESHOV SHABDAN
+             Макешов Шабдан
             </h1>
             <div className="name-divider"></div>
-          </div>
-
-          {/* Хобилер бөлүмү */}
-          <div className="hobbies-section">
-            <h3 className="section-title">
-              <Users className="section-icon" />
-              Хобилерим
-            </h3>
-            <div className="hobbies-grid">
-              <div className="hobby-item">
-                <div className="hobby-icon football-icon">⚽</div>
-                <span className="hobby-text">Футбол ойноо</span>
-              </div>
-              <div className="hobby-item">
-                <div className="hobby-icon mountain-icon">🏔️</div>
-                <span className="hobby-text">Тоого чыгуу</span>
-              </div>
-            </div>
           </div>
 
           {/* Байланыш маалыматы */}
@@ -211,10 +192,28 @@ const ElectronicBusinessCard = () => {
               <div className="contact-info">
                 <p className="contact-label">Телефон</p>
                 <a 
-                  href="tel:+79773230449" 
+                  href="tel:+996501379043" 
                   className="contact-value phone-link"
                 >
-               +996501379043
+                  +996501379043
+                </a>
+              </div>
+            </div>
+
+            {/* WhatsApp */}
+            <div className="contact-item whatsapp-item">
+              <div className="contact-icon whatsapp-icon">
+                <MessageCircle className="icon" />
+              </div>
+              <div className="contact-info">
+                <p className="contact-label">WhatsApp</p>
+                <a 
+                  href="https://wa.me/996501379043" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="contact-value whatsapp-link"
+                >
+                  +996501379043
                 </a>
               </div>
             </div>
@@ -232,7 +231,7 @@ const ElectronicBusinessCard = () => {
                   rel="noopener noreferrer"
                   className="contact-value instagram-link"
                 >
-                 Makeshov_21
+                  @Makeshov_21
                 </a>
               </div>
             </div>
@@ -263,12 +262,12 @@ const ElectronicBusinessCard = () => {
               <div className="contact-info">
                 <p className="contact-label">Telegram</p>
                 <a 
-                  href="https://t.me/ +996501379043" 
+                  href="https://t.me/shabdan_makeshov" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="contact-value telegram-link"
                 >
-									shabdan_makeshov
+                  @shabdan_makeshov
                 </a>
               </div>
             </div>
@@ -669,109 +668,6 @@ const ElectronicBusinessCard = () => {
           box-shadow: 0 2px 10px rgba(139, 92, 246, 0.4);
         }
 
-        .hobbies-section {
-          margin-bottom: 2rem;
-        }
-
-        .section-title {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.5rem;
-          color: white;
-          font-size: 1.1rem;
-          font-weight: 700;
-          margin-bottom: 1.5rem;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-        }
-
-        .section-icon {
-          width: 1.25rem;
-          height: 1.25rem;
-          color: #8b5cf6;
-        }
-
-        .hobbies-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 1rem;
-        }
-
-        .hobby-item {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 0.75rem;
-          padding: 1.25rem;
-          border-radius: 1rem;
-          background: rgba(255, 255, 255, 0.04);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          position: relative;
-          overflow: hidden;
-        }
-
-        .hobby-item::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.05),
-            transparent
-          );
-          transition: left 0.5s ease;
-        }
-
-        .hobby-item:hover {
-          background: rgba(255, 255, 255, 0.08);
-          border-color: rgba(255, 255, 255, 0.15);
-          transform: translateY(-4px);
-        }
-
-        .hobby-item:hover::before {
-          left: 100%;
-        }
-
-        .hobby-icon {
-          font-size: 2rem;
-          width: 3.5rem;
-          height: 3.5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 50%;
-          transition: all 0.3s ease;
-        }
-
-        .football-icon {
-          background: rgba(34, 197, 94, 0.2);
-          box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-        }
-
-        .mountain-icon {
-          background: rgba(139, 92, 246, 0.2);
-          box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
-        }
-
-        .hobby-item:hover .hobby-icon {
-          transform: scale(1.1) rotate(10deg);
-        }
-
-        .hobby-text {
-          color: white;
-          font-weight: 600;
-          font-size: 0.9rem;
-          text-align: center;
-          line-height: 1.3;
-        }
-
         .contact-section {
           space-y: 1.5rem;
         }
@@ -831,6 +727,11 @@ const ElectronicBusinessCard = () => {
           color: #22c55e;
         }
 
+        .whatsapp-icon {
+          background: rgba(34, 197, 94, 0.2);
+          color: #25d366;
+        }
+
         .instagram-icon {
           background: rgba(236, 72, 153, 0.2);
           color: #ec4899;
@@ -876,6 +777,10 @@ const ElectronicBusinessCard = () => {
 
         .phone-link:hover {
           color: #22c55e;
+        }
+
+        .whatsapp-link:hover {
+          color: #25d366;
         }
 
         .instagram-link:hover {
@@ -1014,21 +919,6 @@ const ElectronicBusinessCard = () => {
             flex-direction: column;
             gap: 0.5rem;
           }
-
-          .hobbies-grid {
-            grid-template-columns: 1fr;
-            gap: 0.75rem;
-          }
-
-          .hobby-item {
-            padding: 1rem;
-          }
-
-          .hobby-icon {
-            font-size: 1.75rem;
-            width: 3rem;
-            height: 3rem;
-          }
         }
 
         /* Арнайы скроллбар */
@@ -1049,8 +939,9 @@ const ElectronicBusinessCard = () => {
         ::-webkit-scrollbar-thumb:hover {
           background: rgba(139, 92, 246, 0.8);
         }		
-			`}</style>							
-		</div>													
-		);
+      `}</style>							
+    </div>													
+  );
 };														
-export default ElectronicBusinessCard;	
+
+export default ElectronicBusinessCard;
