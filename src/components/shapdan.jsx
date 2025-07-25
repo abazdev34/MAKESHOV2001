@@ -214,7 +214,7 @@ const ElectronicBusinessCard = () => {
                   href="tel:+79773230449" 
                   className="contact-value phone-link"
                 >
-                  +7 977 323 04 49
+               +996501379043
                 </a>
               </div>
             </div>
@@ -227,12 +227,12 @@ const ElectronicBusinessCard = () => {
               <div className="contact-info">
                 <p className="contact-label">Instagram</p>
                 <a 
-                  href="https://instagram.com/shabdan_makeshov" 
+                  href="https://instagram.com/Makeshov_21" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="contact-value instagram-link"
                 >
-                  @shabdan_makeshov
+                 Makeshov_21
                 </a>
               </div>
             </div>
@@ -263,12 +263,12 @@ const ElectronicBusinessCard = () => {
               <div className="contact-info">
                 <p className="contact-label">Telegram</p>
                 <a 
-                  href="https://t.me/shabdan_makeshov" 
+                  href="https://t.me/ +996501379043" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="contact-value telegram-link"
                 >
-                  @shabdan_makeshov
+									shabdan_makeshov
                 </a>
               </div>
             </div>
