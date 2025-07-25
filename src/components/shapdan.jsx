@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { Camera, Phone, Instagram, User, Upload, Download, Share, X, Youtube, Send, MessageCircle } from 'lucide-react';
-import Img from '../assets/Sho.jpg';
+import Img from '../assets/Shop.jpg';
 const ElectronicBusinessCard = () => {
   const [profileImage, setProfileImage] = useState(Img);
   const [isUploading, setIsUploading] = useState(false);
